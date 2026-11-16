@@ -1,13 +1,13 @@
 
-/* Basic page styling */
+/* Body styling */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header styling */
+/* Header */
 header {
     background-color: #071b3a;
     color: white;
@@ -15,7 +15,7 @@ header {
     padding: 20px;
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
     background-color: #102b50;
     padding: 12px;
@@ -23,14 +23,13 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 10px 20px;
 }
 
 nav ul li a {
@@ -52,24 +51,35 @@ section {
     box-shadow: 0 2px 5px lightgray;
 }
 
-/* Banner image */
-section img {
+/* Images */
+img {
     width: 100%;
     border-radius: 8px;
 }
 
 /* Headings */
-h1, h2, h3 {
+h2 {
     color: #071b3a;
+}
+
+/* Forms */
+form {
+    margin-top: 15px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 /* Buttons */
 button {
     background-color: #e5ad25;
     color: #071b3a;
+    padding: 10px 20px;
     border: none;
-    padding: 12px 20px;
-    margin: 10px 5px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -79,9 +89,27 @@ button:hover {
     background-color: #c89112;
 }
 
-/* Team list */
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #071b3a;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Lists */
 section ul li {
-    padding: 8px;
+    padding: 6px;
 }
 
 /* Footer */
@@ -89,15 +117,18 @@ footer {
     background-color: #071b3a;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 15px;
 }
 
-/* Mobile screen */
+/* Mobile view */
 @media screen and (max-width: 600px) {
     nav ul li {
         display: block;
-        margin: 10px;
+        text-align: center;
+    }
+
+    table {
+        font-size: 12px;
     }
 
     section {
