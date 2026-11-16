@@ -1,0 +1,107 @@
+
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #071b3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #102b50;
+    padding: 12px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+/* Main sections */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px lightgray;
+}
+
+/* Banner image */
+section img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #071b3a;
+}
+
+/* Buttons */
+button {
+    background-color: #e5ad25;
+    color: #071b3a;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #c89112;
+}
+
+/* Team list */
+section ul li {
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #071b3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+}
