@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL 2026 Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,7 +17,7 @@
     <nav>
         <ul>
             <li><a href="#matches">Matches</a></li>
-            <li><a href="#booking">Book Tickets</a></li>
+            <li><a href="booking.html">Book Tickets</a></li>
             <li><a href="#guidelines">Guidelines</a></li>
         </ul>
     </nav>
@@ -24,7 +27,11 @@
 
     <section>
         <h2>Experience the Thrill of IPL 2026!</h2>
-        <img src="images/ipl20206.jpg" alt="IPL 2026" width="100%">
+
+        <img src="image/ipl2027.jpg"
+             alt="IPL 2026"
+             width="100%">
+
         <p>Book your tickets and enjoy live cricket action!</p>
     </section>
 
@@ -54,13 +61,13 @@
         </form>
 
         <p id="matchDetails"></p>
-
     </section>
 
     <section>
         <h2>Match Schedule</h2>
 
         <table border="1">
+
             <tr>
                 <th>Match</th>
                 <th>Date</th>
@@ -109,57 +116,27 @@
                 <td>7:30 PM</td>
                 <td>Eden Gardens, Kolkata</td>
             </tr>
+
         </table>
     </section>
 
-    <!-- Ticket Booking Form -->
+    <!-- Ticket Booking Link -->
     <section id="booking">
+
         <h2>Book Your Tickets</h2>
 
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <p>Choose your favourite IPL match and book your tickets now!</p>
 
-            <br><br>
+        <a href="booking.html">Book Tickets Now</a>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <br><br>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <br><br>
-
-            <label for="ticket">Number of Tickets:</label>
-            <select id="ticket" name="ticket">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-
-            <br><br>
-
-            <label for="stand">Select Stand:</label>
-            <select id="stand" name="stand">
-                <option>General Stand</option>
-                <option>Premium Stand</option>
-                <option>VIP Stand</option>
-            </select>
-
-            <br><br>
-
-            <button type="submit">Book Tickets</button>
-        </form>
     </section>
 
     <section id="guidelines">
+
         <h2>Match Guidelines and Stadium Rules</h2>
 
         <h3>Entry Guidelines</h3>
+
         <ul>
             <li>Carry a valid match ticket for entry.</li>
             <li>Carry a valid government-issued photo ID.</li>
@@ -168,6 +145,7 @@
         </ul>
 
         <h3>Prohibited Items</h3>
+
         <ul>
             <li>Outside food and beverages may not be permitted.</li>
             <li>Weapons and sharp objects are prohibited.</li>
@@ -176,6 +154,7 @@
         </ul>
 
         <h3>General Instructions</h3>
+
         <ul>
             <li>Follow instructions given by stadium officials.</li>
             <li>Do not damage stadium property.</li>
@@ -192,8 +171,20 @@
     <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
 </footer>
 
+<script>
+function showMatch() {
 
+    let match = document.getElementById("match").value;
 
+    if (match === "") {
+        alert("Please select a match!");
+    }
+    else {
+        document.getElementById("matchDetails").innerHTML =
+            "You selected: " + match;
+    }
+
+}
 </script>
 
 </body>
