@@ -1,9 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>IPL 2026 Ticket Booking</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,181 +13,316 @@
 
 <body>
 
-<header>
-    <h1>Welcome to IPL 2026 Ticket Booking</h1>
+    <!-- HEADER AND NAVIGATION -->
+    <header>
 
-    <nav>
-        <ul>
-            <li><a href="#matches">Matches</a></li>
-            <li><a href="booking.html">Book Tickets</a></li>
-            <li><a href="#guidelines">Guidelines</a></li>
-        </ul>
-    </nav>
-</header>
+        <h1>Welcome to IPL 2026 Ticket Booking</h1>
 
-<main>
+        <!-- Hamburger Menu -->
+        <button id="menuToggle" class="menu-toggle" type="button">
+            ☰
+        </button>
 
-    <section>
-        <h2>Experience the Thrill of IPL 2026!</h2>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#matches">Matches</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+            </ul>
+        </nav>
 
-        <img src="image/ipl2027.jpg"
-             alt="IPL 2026"
-             width="100%">
+    </header>
 
-        <p>Book your tickets and enjoy live cricket action!</p>
-    </section>
+    <main>
 
-    <section id="matches">
-        <h2>Select Your Match</h2>
+        <!-- HOME SECTION -->
+        <section>
 
-        <form id="matchForm">
+            <h2>Experience the Thrill of IPL 2026!</h2>
 
-            <label for="match">Choose a Match:</label>
+            <img src="image/ipl2027.jpg"
+                 alt="IPL 2026"
+                 width="100%">
 
-            <select id="match" name="match" required>
-                <option value="">-- Select Match --</option>
-                <option value="RCB vs MI">RCB vs Mumbai Indians</option>
-                <option value="CSK vs KKR">CSK vs Kolkata Knight Riders</option>
-                <option value="DC vs SRH">Delhi Capitals vs Sunrisers Hyderabad</option>
-                <option value="RR vs PBKS">Rajasthan Royals vs Punjab Kings</option>
-                <option value="SRH vs CSK">Sunrisers Hyderabad vs CSK</option>
-                <option value="KKR vs RCB">KKR vs RCB</option>
-            </select>
+            <p>Book your tickets and enjoy live cricket action!</p>
 
-            <br><br>
+        </section>
 
-            <button type="button" onclick="showMatch()">
-                View Match Details
-            </button>
 
-        </form>
+        <!-- MATCH SELECTION -->
+        <section>
 
-        <p id="matchDetails"></p>
-    </section>
+            <h2>Select Your Match</h2>
 
-    <section>
-        <h2>Match Schedule</h2>
+            <form id="matchForm">
 
-        <table border="1">
+                <label for="match">Choose a Match:</label>
 
-            <tr>
-                <th>Match</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Venue</th>
-            </tr>
+                <select id="match" name="match" required>
 
-            <tr>
-                <td>RCB vs MI</td>
-                <td>April 5, 2026</td>
-                <td>7:30 PM</td>
-                <td>Wankhede Stadium, Mumbai</td>
-            </tr>
+                    <option value="">-- Select Match --</option>
 
-            <tr>
-                <td>CSK vs KKR</td>
-                <td>April 6, 2026</td>
-                <td>7:30 PM</td>
-                <td>M. A. Chidambaram Stadium, Chennai</td>
-            </tr>
+                    <option value="RCB vs MI">RCB vs Mumbai Indians</option>
 
-            <tr>
-                <td>DC vs SRH</td>
-                <td>April 7, 2026</td>
-                <td>7:30 PM</td>
-                <td>Arun Jaitley Stadium, Delhi</td>
-            </tr>
+                    <option value="CSK vs KKR">CSK vs Kolkata Knight Riders</option>
 
-            <tr>
-                <td>RR vs PBKS</td>
-                <td>April 8, 2026</td>
-                <td>7:30 PM</td>
-                <td>Sawai Mansingh Stadium, Jaipur</td>
-            </tr>
+                    <option value="DC vs SRH">Delhi Capitals vs Sunrisers Hyderabad</option>
 
-            <tr>
-                <td>SRH vs CSK</td>
-                <td>April 9, 2026</td>
-                <td>7:30 PM</td>
-                <td>Rajiv Gandhi International Stadium, Hyderabad</td>
-            </tr>
+                    <option value="RR vs PBKS">Rajasthan Royals vs Punjab Kings</option>
 
-            <tr>
-                <td>KKR vs RCB</td>
-                <td>April 10, 2026</td>
-                <td>7:30 PM</td>
-                <td>Eden Gardens, Kolkata</td>
-            </tr>
+                    <option value="SRH vs CSK">Sunrisers Hyderabad vs CSK</option>
 
-        </table>
-    </section>
+                    <option value="KKR vs RCB">KKR vs RCB</option>
 
-    <!-- Ticket Booking Link -->
-    <section id="booking">
+                </select>
 
-        <h2>Book Your Tickets</h2>
+                <br><br>
 
-        <p>Choose your favourite IPL match and book your tickets now!</p>
+                <button type="button" onclick="showMatch()">
+                    View Match Details
+                </button>
 
-        <a href="booking.html">Book Tickets Now</a>
+            </form>
 
-    </section>
+            <p id="matchDetails"></p>
 
-    <section id="guidelines">
+        </section>
 
-        <h2>Match Guidelines and Stadium Rules</h2>
 
-        <h3>Entry Guidelines</h3>
+        <!-- MATCH SCHEDULE -->
+        <section id="matches">
 
-        <ul>
-            <li>Carry a valid match ticket for entry.</li>
-            <li>Carry a valid government-issued photo ID.</li>
-            <li>Arrive at the stadium well before match time.</li>
-            <li>Follow security checking procedures.</li>
-        </ul>
+            <h2>IPL 2026 Match Schedule</h2>
 
-        <h3>Prohibited Items</h3>
+            <!-- FILTER AND VIEW BUTTONS -->
+            <div class="match-controls">
 
-        <ul>
-            <li>Outside food and beverages may not be permitted.</li>
-            <li>Weapons and sharp objects are prohibited.</li>
-            <li>Fireworks and dangerous materials are prohibited.</li>
-            <li>Professional cameras may require special permission.</li>
-        </ul>
+                <label for="teamFilter">Filter by Team:</label>
 
-        <h3>General Instructions</h3>
+                <select id="teamFilter">
 
-        <ul>
-            <li>Follow instructions given by stadium officials.</li>
-            <li>Do not damage stadium property.</li>
-            <li>Maintain cleanliness inside the stadium.</li>
-            <li>Do not enter restricted areas.</li>
-            <li>Tickets are subject to the stadium's terms and conditions.</li>
-        </ul>
+                    <option value="all">All Teams</option>
+                    <option value="RCB">RCB</option>
+                    <option value="MI">MI</option>
+                    <option value="CSK">CSK</option>
+                    <option value="KKR">KKR</option>
+                    <option value="DC">DC</option>
+                    <option value="SRH">SRH</option>
+                    <option value="RR">RR</option>
+                    <option value="PBKS">PBKS</option>
 
-    </section>
+                </select>
 
-</main>
+                <button type="button" id="gridBtn">
+                    Grid View
+                </button>
 
-<footer>
-    <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
-</footer>
+                <button type="button" id="listBtn">
+                    List View
+                </button>
 
-<script>
-function showMatch() {
+            </div>
 
-    let match = document.getElementById("match").value;
 
-    if (match === "") {
-        alert("Please select a match!");
-    }
-    else {
-        document.getElementById("matchDetails").innerHTML =
-            "You selected: " + match;
-    }
+            <!-- MATCH CARDS -->
+            <div class="match-grid" id="matchGrid">
 
-}
-</script>
+                <div class="match-card" data-team="RCB MI">
+
+                    <h3>RCB vs MI</h3>
+
+                    <p><strong>Date:</strong> April 5, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> Wankhede Stadium, Mumbai</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+
+                <div class="match-card" data-team="CSK KKR">
+
+                    <h3>CSK vs KKR</h3>
+
+                    <p><strong>Date:</strong> April 6, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> M. A. Chidambaram Stadium, Chennai</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+
+                <div class="match-card" data-team="DC SRH">
+
+                    <h3>DC vs SRH</h3>
+
+                    <p><strong>Date:</strong> April 7, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> Arun Jaitley Stadium, Delhi</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+
+                <div class="match-card" data-team="RR PBKS">
+
+                    <h3>RR vs PBKS</h3>
+
+                    <p><strong>Date:</strong> April 8, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> Sawai Mansingh Stadium, Jaipur</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+
+                <div class="match-card" data-team="SRH CSK">
+
+                    <h3>SRH vs CSK</h3>
+
+                    <p><strong>Date:</strong> April 9, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> Rajiv Gandhi International Stadium, Hyderabad</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+
+                <div class="match-card" data-team="KKR RCB">
+
+                    <h3>KKR vs RCB</h3>
+
+                    <p><strong>Date:</strong> April 10, 2026</p>
+
+                    <p><strong>Time:</strong> 7:30 PM</p>
+
+                    <p><strong>Venue:</strong> Eden Gardens, Kolkata</p>
+
+                    <a href="booking.html">Book Tickets</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOOKING SECTION -->
+        <section id="booking">
+
+            <h2>Book Your Tickets</h2>
+
+            <p>Choose your favourite IPL match and book your tickets now!</p>
+
+            <a href="booking.html">Book Tickets Now</a>
+
+        </section>
+
+
+        <!-- GUIDELINES SECTION -->
+        <section id="guidelines">
+
+            <h2>Match Guidelines and Stadium Rules</h2>
+
+            <div class="guidelines-grid">
+
+                <div class="guideline-card">
+
+                    <h3>Entry Guidelines</h3>
+
+                    <ul>
+                        <li>Carry a valid match ticket for entry.</li>
+                        <li>Carry a valid government-issued photo ID.</li>
+                        <li>Arrive at the stadium well before match time.</li>
+                        <li>Follow security checking procedures.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="guideline-card">
+
+                    <h3>Prohibited Items</h3>
+
+                    <ul>
+                        <li>Outside food and beverages may not be permitted.</li>
+                        <li>Weapons and sharp objects are prohibited.</li>
+                        <li>Fireworks and dangerous materials are prohibited.</li>
+                        <li>Professional cameras may require special permission.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="guideline-card">
+
+                    <h3>General Instructions</h3>
+
+                    <ul>
+                        <li>Follow instructions given by stadium officials.</li>
+                        <li>Do not damage stadium property.</li>
+                        <li>Maintain cleanliness inside the stadium.</li>
+                        <li>Do not enter restricted areas.</li>
+                        <li>Tickets are subject to the stadium's terms and conditions.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- EXISTING MATCH FUNCTION -->
+    <script>
+
+        function showMatch() {
+
+            let match = document.getElementById("match").value;
+
+            if (match === "") {
+
+                alert("Please select a match!");
+
+            }
+            else {
+
+                document.getElementById("matchDetails").innerHTML =
+                    "You selected: " + match;
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- ACTIVITY 5, 7 AND 8 JAVASCRIPT -->
+    <script src="app.js"></script>
 
 </body>
 </html>

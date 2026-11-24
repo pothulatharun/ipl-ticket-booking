@@ -13,213 +13,248 @@
 
 <body>
 
-<header>
+    <header>
+        <h1>IPL 2026 Ticket Booking</h1>
 
-    <h1>IPL 2026 Ticket Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#matches">Matches</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#matches">Matches</a></li>
-            <li><a href="booking.html">Book Tickets</a></li>
-        </ul>
-    </nav>
+    <main>
 
-</header>
+        <section>
 
-<main>
+            <h2>Ticket Booking Form</h2>
 
-    <section>
+            <button type="button" id="scrollToBooking">
+                Book Now
+            </button>
 
-        <h2>Ticket Booking Form</h2>
-<button type="button" id="scrollToBooking">
-    Book Now
-</button>
-      <form id="bookingForm"
+            <form id="bookingForm">
 
-            <!-- Name -->
-            <label for="name">Name:</label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                minlength="3"
-                maxlength="40"
-                required
-            >
-
-            <br><br>
-
-            <!-- Email -->
-            <label for="email">Email:</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                maxlength="60"
-                required
-            >
-
-            <br><br>
-
-            <!-- Phone Number -->
-            <label for="phone">Phone Number:</label>
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter 10 digit number"
-                pattern="[0-9]{10}"
-                minlength="10"
-                maxlength="10"
-                title="Enter exactly 10 digits"
-                required
-            >
-
-            <br><br>
-
-            <!-- Match Selection -->
-            <label for="match">Select Match:</label>
-
-            <select id="match" name="match" required>
-
-                <option value="">-- Select Match --</option>
-
-                <option value="RCB vs MI">RCB vs Mumbai Indians</option>
-
-                <option value="CSK vs KKR">CSK vs Kolkata Knight Riders</option>
-
-                <option value="DC vs SRH">Delhi Capitals vs Sunrisers Hyderabad</option>
-
-                <option value="RR vs PBKS">Rajasthan Royals vs Punjab Kings</option>
-
-                <option value="SRH vs CSK">Sunrisers Hyderabad vs CSK</option>
-
-                <option value="KKR vs RCB">KKR vs RCB</option>
-
-            </select>
-
-            <br><br>
-
-            <!-- Stand Category -->
-            <label for="stand">Stand Category:</label>
-
-            <select id="stand" name="stand" required>
-
-                <option value="">-- Select Stand --</option>
-
-                <option value="General">General Stand</option>
-
-                <option value="Premium">Premium Stand</option>
-
-                <option value="VIP">VIP Stand</option>
-
-            </select>
-
-            <br><br>
-
-            <!-- Number of Tickets -->
-            <label for="tickets">Number of Tickets:</label>
-
-            <input
-                type="number"
-                id="tickets"
-                name="tickets"
-                min="1"
-                max="10"
-                value="1"
-                required
-            >
-
-            <br><br>
-
-            <!-- Radio Buttons -->
-            <fieldset>
-
-                <legend>Booking Preference</legend>
+                <!-- Name -->
+                <label for="name">Name:</label>
 
                 <input
-                    type="radio"
-                    id="together"
-                    name="preference"
-                    value="Seats Together"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    minlength="3"
+                    maxlength="40"
                     required
                 >
 
-                <label for="together">Seats Together</label>
+                <br><br>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    maxlength="60"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Phone Number -->
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter 10 digit number"
+                    pattern="[0-9]{10}"
+                    minlength="10"
+                    maxlength="10"
+                    title="Enter exactly 10 digits"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Match Selection -->
+                <label for="match">Select Match:</label>
+
+                <select id="match" name="match" required>
+
+                    <option value="">-- Select Match --</option>
+
+                    <option value="RCB vs MI">
+                        RCB vs Mumbai Indians
+                    </option>
+
+                    <option value="CSK vs KKR">
+                        CSK vs Kolkata Knight Riders
+                    </option>
+
+                    <option value="DC vs SRH">
+                        Delhi Capitals vs Sunrisers Hyderabad
+                    </option>
+
+                    <option value="RR vs PBKS">
+                        Rajasthan Royals vs Punjab Kings
+                    </option>
+
+                    <option value="SRH vs CSK">
+                        Sunrisers Hyderabad vs CSK
+                    </option>
+
+                    <option value="KKR vs RCB">
+                        KKR vs RCB
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <!-- Stand Category -->
+                <label for="stand">Stand Category:</label>
+
+                <select id="stand" name="stand" required>
+
+                    <option value="">-- Select Stand --</option>
+
+                    <option value="General" data-price="500">
+                        General Stand - ₹500
+                    </option>
+
+                    <option value="Premium" data-price="1000">
+                        Premium Stand - ₹1000
+                    </option>
+
+                    <option value="VIP" data-price="2000">
+                        VIP Stand - ₹2000
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <!-- Number of Tickets -->
+                <label for="tickets">Number of Tickets:</label>
+
+                <input
+                    type="number"
+                    id="tickets"
+                    name="tickets"
+                    min="1"
+                    max="10"
+                    value="1"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Radio Buttons -->
+                <fieldset>
+
+                    <legend>Booking Preference</legend>
+
+                    <input
+                        type="radio"
+                        id="together"
+                        name="preference"
+                        value="Seats Together"
+                        required
+                    >
+
+                    <label for="together">Seats Together</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="any"
+                        name="preference"
+                        value="Any Available Seats"
+                    >
+
+                    <label for="any">Any Available Seats</label>
+
+                </fieldset>
 
                 <br>
 
+                <!-- Checkbox -->
                 <input
-                    type="radio"
-                    id="any"
-                    name="preference"
-                    value="Any Available Seats"
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    value="accepted"
+                    required
                 >
 
-                <label for="any">Any Available Seats</label>
+                <label for="terms">
+                    I agree to the booking terms and conditions.
+                </label>
 
-            </fieldset>
+                <br><br>
+
+                <!-- Submit and Reset -->
+                <button type="submit">Submit Booking</button>
+
+                <button type="reset">Reset Form</button>
+
+            </form>
+
+            <!-- Activity 7: Booking Summary Card -->
+            <div class="summary-card">
+
+                <h2>Booking Summary</h2>
+
+                <p>
+                    Match:
+                    <span id="summaryMatch">Not selected</span>
+                </p>
+
+                <p>
+                    Stand:
+                    <span id="summaryStand">Not selected</span>
+                </p>
+
+                <p>
+                    Tickets:
+                    <span id="summaryQuantity">1</span>
+                </p>
+
+                <h3>
+                    Total Price: ₹<span id="totalPrice">0</span>
+                </h3>
+
+            </div>
+
+            <!-- Toast Notification -->
+            <div id="toast"></div>
+
+            <p id="successMessage"></p>
 
             <br>
 
-            <!-- Checkbox -->
-            <input
-                type="checkbox"
-                id="terms"
-                name="terms"
-                value="accepted"
-                required
-            >
+            <a href="index.html">Back to Home</a>
 
-            <label for="terms">
-                I agree to the booking terms and conditions.
-            </label>
+        </section>
 
-            <br><br>
+    </main>
 
-            <!-- Submit and Reset -->
-            <button type="submit">Submit Booking</button>
+    <footer>
 
-            <button type="reset">Reset Form</button>
-    
+        <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
 
-        </form>
-        <div id="toast"></div>
-        <p id="successMessage"></p>
+    </footer>
 
-        <br>
+    <!-- JavaScript -->
+    <script src="app.js"></script>
 
-        <a href="index.html">Back to Home</a>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
-
-</footer>
-<script src="app.js"></script>
 </body>
-<script>
-
-function showSuccess(event) {
-
-    event.preventDefault();
-
-    document.getElementById("successMessage").innerHTML =
-        "Congratulations! Your ticket booking form was submitted successfully!";
-
-    document.getElementById("successMessage").style.color = "green";
-
-}
-
-</script>
 </html>
